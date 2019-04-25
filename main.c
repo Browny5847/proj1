@@ -3,15 +3,19 @@
 int
 main ()
 {
-  int x;
-  int i;
-  int k;
-  char message[100];
+  int x; //Switch Case
+  int i; //
+  int k; //The Key
+  char message[100]; //Message input
+
+    // Scanning for the message to be encrypted and the key vaule.
 
   printf ("\nPlease enter the message: ");
-  gets (message);
+  scanf ("%c", &message);
   printf ("\nPlease enter a key: ");
   scanf ("%d", &k);
+
+// Switch between Encryption and Decryption
 
   printf ("\nWould you like to:\n");
   printf ("1 = Encrypt the message.\n");
