@@ -11,7 +11,8 @@ main ()
     // Scanning for the message to be encrypted and the key vaule.
 
   printf ("\nPlease enter the message: ");
-  scanf ("%c", &message);
+  scanf ("%s", &message);
+  printf ("\n(Type 0 if key is unknown)");
   printf ("\nPlease enter a key: ");
   scanf ("%d", &k);
 
@@ -20,6 +21,7 @@ main ()
   printf ("\nWould you like to:\n");
   printf ("1 = Encrypt the message.\n");
   printf ("2 = Decrypt the message.\n");
+  printf ("3 = Decrypt the message with unknown key.\n");
   scanf ("%d", &x);
 
 
@@ -52,6 +54,11 @@ main ()
 	    message[i] = ((message[i] - 97) - k + 26) % 26 + 97;
 	  }
       printf ("\nDecrypted message: %s\n", message);
+      break;
+      
+    case 3:
+        
+        
       break;
 
     default:
