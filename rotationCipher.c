@@ -5,8 +5,12 @@ main ()
 {
   int x; //Switch Case
   int i; //
+  int g;
   int k; //The Key
   char message[100]; //Message input
+  char alpha[] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N',
+                'O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+  
 
     // Scanning for the message to be encrypted and the key vaule.
 
@@ -57,8 +61,18 @@ main ()
       break;
       
     case 3:
-        
-        
+      g = abs((alpha[0] - 65) - (message[0] - 65));
+      printf("Key is: %d", g);
+      for (i = 0; (i < 100 && message[i] != '\0'); i++)  
+      if (message[i] >= 65 && message[i] <= 90)
+	  {
+	    message[i] = ((message[i] - 65) - g + 26) % 26 + 65;
+	  }
+	else if (message[i] >= 97 && message[i] <= 122)
+	  {
+	    message[i] = ((message[i] - 97) - g + 26) % 26 + 97;
+	  }
+      printf ("\nDecrypted message: %s\n", message);
       break;
 
     default:
