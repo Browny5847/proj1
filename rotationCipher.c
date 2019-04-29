@@ -66,7 +66,7 @@ main ()
 
     case 3:
       // case 3 is Decryption with unknown key
-      g = abs ((alpha[0] - 65) - (message[0] - 65));
+      g = (alpha[0] - 65) - (message[0] - 65);
       printf ("Key is: %d", g);
       for (i = 0; (i < 100 && message[i] != '\0'); i++)
 	if (message[i] >= 65 && message[i] <= 90)	// Uppercase Decryption
